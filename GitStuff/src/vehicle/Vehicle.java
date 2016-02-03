@@ -7,15 +7,15 @@ public abstract class Vehicle {
 	protected int model;
 	protected String name;
 	protected int price;
-	protected int serial;
+	protected String serial;
 	protected int speed;
 	protected int direction;
 	
-	public Vehicle(String color, int model, String name, int price, int serial, int speed, int direction){
-		setAllFields(color, model, name, price, serial, speed, direction);
+	public Vehicle(String name, String color, int price, int model, String serial, int speed, int direction){
+		setAllFields(name, color, price, model, serial, speed, direction);
 	}
 	
-	public void setAllFields(String color, int model, String name, int price, int serial, int speed, int direction){
+	public void setAllFields(String name, String color, int price, int model, String serial, int speed, int direction){
 		this.color = color;
 		this.model = model;
 		this.name = name;
@@ -28,7 +28,7 @@ public abstract class Vehicle {
 	public String toString(){
 		Formatter f = new Formatter();
 		String retString = f.format("%s:\n"
-				+ "Serial Number:\t%d\n"
+				+ "Serial Number:\t%s\n"
 				+ "Model:\t\t%d\n"
 				+ "Color:\t\t%s\n"
 				+ "Price:\t\t$%d\n\n"
