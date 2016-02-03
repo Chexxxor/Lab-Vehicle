@@ -3,12 +3,12 @@ package vehicle;
 public class Bicycle extends Vehicle {
 	protected int gears;
 
-	public Bicycle(String name, String color, int price, int model, int serial, int speed, int direction, int gears) {
+	public Bicycle(String name, String color, int price, int model, String serial, int speed, int direction) {
 		super(name, color, price, model, serial, speed, direction);
-		this.gears = gears;
+		gears = 1;
 	}
 	
-	public void setAllFields(String name, String color, int price, int model, int serial, int speed, int direction, int gears){
+	public void setAllFields(String name, String color, int price, int model, String serial, int speed, int direction, int gears){
 		super.setAllFields(name, color, price, model, serial, speed, direction);
 		this.gears = gears;
 	}	
