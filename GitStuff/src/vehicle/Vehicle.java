@@ -11,11 +11,11 @@ public abstract class Vehicle {
 	protected int speed;
 	protected int direction;
 	
-	public Vehicle(String color, int model, String name, int price, int serial, int speed, int direction){
-		setAllFields(color, model, name, price, serial, speed, direction);
+	public Vehicle(String name, String color, int price, int model, int serial, int speed, int direction){
+		setAllFields(name, color, price, model, serial, speed, direction);
 	}
 	
-	public void setAllFields(String color, int model, String name, int price, int serial, int speed, int direction){
+	public void setAllFields(String name, String color, int price, int model, int serial, int speed, int direction){
 		this.color = color;
 		this.model = model;
 		this.name = name;
