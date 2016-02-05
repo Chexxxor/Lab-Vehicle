@@ -3,6 +3,11 @@ package vehicle;
 public class Car extends Vehicle{
 	private int power;
 	
+	public Car(){
+		super();
+		power = 100;
+	}
+	
 	public Car(String name, String color, int price, int model, String serial, int speed, int direction){
 		super(name, color, price, model, serial, speed, direction);
 	}
@@ -18,7 +23,7 @@ public class Car extends Vehicle{
 	}
 	@Override
 	public String toString(){
-		return super.toString() + "power: " + getPower();
+		return super.toString() + "\nPower:\t\t" + power + " HK";
 	}
 	@Override
 	public void turnLeft(int Degrees){
