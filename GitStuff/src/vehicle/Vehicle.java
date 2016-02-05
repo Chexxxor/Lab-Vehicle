@@ -11,6 +11,16 @@ public abstract class Vehicle {
 	protected int speed;
 	protected int direction;
 	
+	public Vehicle(){
+		name = "Vehicle";
+		color = "Black";
+		price = 30000;
+		model = 2015;
+		serial = "AABB-1122";
+		speed = 0;
+		direction = 0;
+	}
+	
 	public Vehicle(String name, String color, int price, int model, String serial, int speed, int direction){
 		setAllFields(name, color, price, model, serial, speed, direction);
 	}
@@ -32,7 +42,7 @@ public abstract class Vehicle {
 				+ "Model:\t\t%d\n"
 				+ "Color:\t\t%s\n"
 				+ "Price:\t\t$%d\n\n"
-				+ "Speed:\t\t%d mph"
+				+ "Speed:\t\t%d mph\n"
 				+ "Direction\t\t%d degrees", name, serial, model, color).toString();
 		f.close();
 		return retString;
