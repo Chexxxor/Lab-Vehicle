@@ -2,6 +2,11 @@ package vehicle;
 
 public class Bicycle extends Vehicle {
 	protected int gears;
+	
+	Bicycle(){
+		super();
+		gears = 1;
+	}
 
 	public Bicycle(String name, String color, int price, int model, String serial, int speed, int direction) {
 		super(name, color, price, model, serial, speed, direction);
@@ -28,6 +33,6 @@ public class Bicycle extends Vehicle {
 	}
 
 	public String toString(){
-		return super.toString() + "Gears:\t\t" + gears;
+		return super.toString() + "\nGears:\t\t" + gears;
 	}
 }
